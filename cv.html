@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ali Hejazizo — AI Lead Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --accent: #4e46b4;          /* indigo name / section color */
+    --ink: #2d2d2d;             /* body text */
+    --muted: #6f6f6f;           /* dates, company, title */
+    --rule: #d9d9d9;            /* hairline rules */
+    --bullet: #4a4a4a;
+    --page-w: 820px;
+    --left-col: 150px;
+    --gap: 24px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #ececed;
+    color: var(--ink);
+    font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.46;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: var(--page-w);
+    margin: 32px auto;
+    background: #fff;
+    padding: 48px 54px 56px;
+    box-shadow: 0 2px 18px rgba(0, 0, 0, 0.12);
+  }
+
+  /* ── Header ─────────────────────────────────────────── */
+  .name {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1.02;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--muted);
+    margin: 8px 0 0;
+  }
+
+  hr.divider {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 18px 0;
+  }
+
+  /* ── Contact grid ───────────────────────────────────── */
+  .contact {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 10px;
+    column-gap: 18px;
+    margin: 4px 0 2px;
+  }
+  .contact a { color: var(--accent); text-decoration: none; }
+  .contact a:hover { text-decoration: underline; }
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .contact-item svg {
+    width: 15px;
+    height: 15px;
+    flex: 0 0 15px;
+    fill: none;
+    stroke: var(--accent);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .contact-item svg.solid { fill: var(--accent); stroke: none; }
+
+  /* ── Section / two-column rows ──────────────────────── */
+  .section { margin-top: 6px; }
+
+  .row {
+    display: grid;
+    grid-template-columns: var(--left-col) 1fr;
+    column-gap: var(--gap);
+    align-items: start;
+  }
+
+  .sec-title {
+    color: var(--accent);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  /* Title placed in the main column (Work Experience, Education) */
+  .sec-title-main {
+    color: var(--accent);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 16px;
+    margin: 12px 0 8px;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .meta {
+    color: var(--muted);
+    font-size: 12.5px;
+    line-height: 1.4;
+  }
+  .meta .org { color: var(--ink); }
+
+  .entry { margin-bottom: 13px; }
+  .role {
+    font-weight: 700;
+    color: var(--ink);
+    font-size: 13.5px;
+    margin: 0 0 5px;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+  .entry p { margin: 0 0 6px; }
+  .lead { font-weight: 700; color: var(--ink); margin: 8px 0 3px; break-after: avoid; page-break-after: avoid; }
+
+  ul {
+    margin: 4px 0 8px;
+    padding-left: 18px;
+  }
+  ul li {
+    margin-bottom: 4px;
+    color: var(--ink);
+  }
+  ul li::marker { color: var(--bullet); }
+  ul ul { margin: 4px 0; }
+  ul ul li { list-style-type: circle; }
+
+  .highlights li { margin-bottom: 6px; }
+  .highlights .k { font-weight: 700; }
+
+  /* ── Print (A4) ─────────────────────────────────────── */
+  @page { size: A4; margin: 14mm 15mm; }
+  @media print {
+    html, body { background: #fff; font-size: 10.5pt; }
+    .page {
+      max-width: none;
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+    }
+    a { color: var(--accent); }
+    li { break-inside: avoid; page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+  <main class="page">
+
+    <!-- Header -->
+    <header>
+      <h1 class="name">Ali Hejazizo</h1>
+      <p class="subtitle">AI Lead Engineer</p>
+    </header>
+
+    <hr class="divider" />
+
+    <!-- Contact -->
+    <section class="contact">
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>+780-680-3295</span>
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+        <a href="mailto:hejazizo.ali@gmail.com">hejazizo.ali@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Toronto, Canada</span>
+      </div>
+      <div class="contact-item">
+        <svg class="solid" viewBox="0 0 24 24"><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.05-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.39 1.24-3.23-.12-.31-.54-1.53.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.18.77.84 1.23 1.92 1.23 3.23 0 4.62-2.81 5.64-5.49 5.94.43.37.81 1.1.81 2.22 0 1.6-.01 2.89-.01 3.29 0 .32.21.7.82.58A12 12 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z"/></svg>
+        <a href="https://github.com/hejazizo">hejazizo</a>
+      </div>
+      <div class="contact-item">
+        <svg class="solid" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+        <a href="https://linkedin.com/in/hejazizo">hejazizo</a>
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <a href="https://pytopia.ai">pytopia.ai</a>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Highlights -->
+    <section class="section">
+      <div class="row">
+        <div class="sec-title">Highlights</div>
+        <div>
+          <ul class="highlights">
+            <li><span class="k">AI Leadership:</span> Founded and led AI team developing agentic solutions for real estate workflows at Vendoroo</li>
+            <li><span class="k">Entrepreneurial Impact:</span> Built Pytopia (20,000+ learners) and ApplyLink (7,000+ users) from concept to market</li>
+            <li><span class="k">LLM Expertise:</span> Implemented cutting-edge AI with AutoGen, LlamaIndex, fine-tuning (LoRA, RLHF)</li>
+            <li><span class="k">Technical Architecture:</span> Designed robust systems with FastAPI, Django, PostgreSQL, Redis, and Celery</li>
+            <li><span class="k">Business Results:</span> Delivered 38% user engagement increase at Dippy AI</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Work Experience -->
+    <section class="section">
+      <div class="row">
+        <div></div>
+        <div class="sec-title-main">Work Experience</div>
+      </div>
+
+      <!-- Vendoroo -->
+      <div class="row entry">
+        <div class="meta"><div class="org">Vendoroo</div><div>Oct 2024 - Present</div></div>
+        <div>
+          <p class="role">Founding AI Lead</p>
+          <p>Founding AI Engineer at Vendoroo, where I lead a team of AI engineers developing cutting-edge agentic AI solutions that revolutionize communication workflows in the real estate property maintenance sector. Our technology functions as an intelligent assistant that streamlines and automates complex maintenance processes, essentially "Cursor for real estate property maintenance."</p>
+          <p class="lead">What I Do:</p>
+          <ul>
+            <li>Architect and lead the development of our agentic AI framework, integrating advanced LLM technologies into practical real estate maintenance solutions</li>
+            <li>Spearhead the integration of AI frameworks including AutoGen, LlamaIndex, and custom LLM implementations</li>
+            <li>Lead technical strategy for our AI team, balancing innovation with practical, scalable solutions</li>
+            <li>Drive product development from conception to deployment with high ownership and autonomy</li>
+          </ul>
+          <p class="lead">Technical Leadership:</p>
+          <p>Building a product that transforms how property managers handle maintenance communication through:</p>
+          <ul>
+            <li>Intelligent workflow automation that reduces manual processing by property managers</li>
+            <li>Agentic systems that can autonomously coordinate between tenants, property managers, and service providers</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Pytopia -->
+      <div class="row entry">
+        <div class="meta"><div class="org">Pytopia</div><div>May 2021 - Present</div></div>
+        <div>
+          <p class="role">Founder</p>
+          <p>As the Founder of Pytopia, I've established and grown a thriving data science platform and community that bridges the gap between education and career success in the tech industry. Key achievements include:</p>
+          <ul>
+            <li>Developed and launched high-quality courses covering crucial areas such as machine learning, Python, deep learning, statistics, data processing, data visualization, Linux, Django, and Docker.</li>
+            <li>Implemented a unique mentorship program, providing personalized guidance to students and enhancing their learning experience and career prospects.</li>
+            <li>Organized and facilitated both online and in-person events, creating networking opportunities.</li>
+            <li>Grew the platform to serve over 20,000 active learners, demonstrating the high demand and effectiveness of our educational approach.</li>
+          </ul>
+          <p>Through Pytopia, I've been able to combine my passion for data science with my commitment to education, creating a platform that empowers thousands of students to launch successful careers in the rapidly evolving field of data science and AI.</p>
+        </div>
+      </div>
+
+      <!-- Dippy.ai -->
+      <div class="row entry">
+        <div class="meta"><div class="org">Dippy.ai</div><div>Aug 2024 - Dec 2024</div></div>
+        <div>
+          <p class="role">Senior AI Engineer</p>
+          <p>AI Engineer specializing in LLMs and conversational AI at Dippy.ai. Improved character-based chat systems through fine-tuning and reinforcement learning techniques.</p>
+          <p class="lead">Key Achievements</p>
+          <ul>
+            <li>Fine-tuned LLMs using LoRA and Reinforcement Learning from Human Feedback (GRPO), resulting in 40% increase in user engagement</li>
+            <li>Conducted comprehensive model evaluations and A/B testing via Amplitude</li>
+            <li>Implemented robust content safety systems for detecting NSFW content and protecting underage users</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Antler -->
+      <div class="row entry">
+        <div class="meta"><div class="org">Antler</div><div>May 2024 - Aug 2024</div></div>
+        <div>
+          <p class="role">Founder in Residence</p>
+          <p>Selected to join Antler's prestigious Cohort 6 as a Founder in Residence, where I underwent an intensive 4-month startup development program. During this transformative experience:</p>
+          <ul>
+            <li>Received coaching and mentorship from successful entrepreneurs and industry experts</li>
+            <li>Developed and refined business concepts through rigorous validation processes</li>
+            <li>Gained deep expertise in market analysis, product-market fit, and go-to-market strategies</li>
+            <li>Built a valuable network with fellow founders, investors, and startup ecosystem leaders</li>
+            <li>Acquired pitching skills and learned effective fundraising approaches</li>
+            <li>Utilized Antler's proven methodology to accelerate from concept to viable business model</li>
+          </ul>
+          <p>This experience equipped me with the entrepreneurial toolkit, strategic mindset, and founder network essential for building scalable, innovative ventures</p>
+        </div>
+      </div>
+
+      <!-- Affinity.co -->
+      <div class="row entry">
+        <div class="meta"><div class="org">Affinity.co</div><div>2021 - 2024</div></div>
+        <div>
+          <p class="role">Senior Machine Learning Engineer</p>
+          <ul>
+            <li>Led a team of 3 engineers and implemented a two-stage structured information extraction system using Large Language Models (LLMs), improving accuracy from 54% to 88%. The first stage utilized Q&amp;A models, while the second stage leveraged advanced LLMs for enhanced performance.</li>
+            <li>Created a connection suggestion feature for investors by identifying individuals with overlapping work experiences, enabling targeted networking with key personnel in desired companies.</li>
+            <li>Applied advanced NLP techniques and LLMs to normalize data across job titles, locations, and industry tags, ensuring consistency and accuracy throughout the platform.</li>
+            <li>Implemented data deduplication processes using blocking and matching algorithms on company and people records, significantly reducing redundancy and improving data quality.</li>
+            <li>Designed and deployed gender and ethnicity detection models based on name and profile picture analysis, providing valuable demographic insights for users.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- AltaML -->
+      <div class="row entry">
+        <div class="meta"><div class="org">AltaML</div><div>2018 - 2021</div></div>
+        <div>
+          <p class="role">Machine Learning Engineer</p>
+          <p>3+ years in development and deployment of machine learning algorithms.</p>
+          <ul>
+            <li>Developed and deployed advanced Natural Language Processing (NLP) and Computer Vision models, contributing to project success.</li>
+            <li>Developed and deployed customer service chatbots.</li>
+            <li>Collaborated closely with cross-functional teams to translate business objectives into technical solutions, ensuring alignment with project goals.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section">
+      <div class="row">
+        <div></div>
+        <div class="sec-title-main">Education</div>
+      </div>
+      <div class="row entry">
+        <div class="meta"><div class="org">University of Alberta</div><div>Edmonton, Canada</div><div>2016 - 2020</div></div>
+        <div>
+          <p class="role">M.Sc. of Computer Science</p>
+          <ul>
+            <li>GPA: 3.9/4</li>
+            <li>Thesis:
+              <ul>
+                <li>Combining Variational Sampling and Metropolis–Hastings Sampling for Paraphrase Generation</li>
+                <li>Supervisor: Denilson Barbosa</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Honors and Awards -->
+    <section class="section">
+      <div class="row">
+        <div class="sec-title">Honors and Awards</div>
+        <div>
+          <ul>
+            <li>Ranked 1st in Electrical Engineering, Power Group, among more than 30 students.</li>
+            <li>Granted admission from Talented Student Office of Amirkabir University of Technology for graduate study.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
