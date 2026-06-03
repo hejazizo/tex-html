@@ -1,0 +1,43 @@
+% ─────────────────────────────────────────────────────────────────────────────
+%  cv.tex — main entry point
+%  Sections live in sections/*.tex — edit those, not this file.
+% ─────────────────────────────────────────────────────────────────────────────
+\PassOptionsToPackage{expansion=false}{microtype}
+\documentclass[11pt,a4paper]{moderncv}
+
+% ── Style ────────────────────────────────────────────────────────────────────
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+
+\usepackage{lmodern}
+\usepackage[scale=0.83, top=2cm, bottom=2cm]{geometry}
+
+% Deep royal blue
+\definecolor{cvblue}{RGB}{28, 78, 158}
+\colorlet{color1}{cvblue}
+\colorlet{color2}{cvblue}
+
+\setlength{\hintscolumnwidth}{2.8cm}
+\renewcommand*{\namefont}{\fontsize{26}{30}\bfseries\upshape}
+
+% ── Personal info (edit here) ─────────────────────────────────────────────────
+\name{Ali}{Hejazizo}
+\title{Senior Software Engineer}
+\address{San Francisco, CA}{}{}
+\phone[mobile]{+1~(555)~000~0000}
+\email{ali@example.com}
+\homepage{github.com/hejazizo}
+\social[linkedin]{ali-hejazizo}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\begin{document}
+\makecvtitle
+
+\input{sections/summary}
+\input{sections/experience}
+\input{sections/education}
+\input{sections/skills}
+\input{sections/projects}
+\input{sections/languages}
+
+\end{document}
